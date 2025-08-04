@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           </button>
 
           {/* Get Started Button */}
-          <Link href="/get-started" className="get-started-btn">
+          <Link href="/sign-in" className="get-started-btn">
             Get Started
           </Link>
 
