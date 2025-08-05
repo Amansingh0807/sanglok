@@ -80,6 +80,10 @@
   overflow: hidden;
 }
 
+.dark .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .nav-link::before {
   content: '';
   position: absolute;
@@ -96,7 +100,7 @@
 }
 
 .nav-link:hover {
-  color: rgb(0, 58, 103);
+  color: rgb(59, 137, 197);
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }

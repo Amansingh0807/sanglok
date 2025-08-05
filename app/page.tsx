@@ -3,15 +3,21 @@ import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 
-
 export default function Home() {
   return (
-    <div>
-      <Navbar/>
-      <h1 className="text-center justify-center text-red-300 font-bold text-4xl items-center flex h-screen">
-       <span className='font-bold text-8xl text-green-300'> Sanglok </span> <br/> <br/><br/><br/>is under construction</h1>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
 
-       <Footer/>
+      <main className="flex flex-1 flex-col justify-center items-center px-4 text-center">
+        <h1 className="font-bold text-green-400 text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-6">
+          Sanglok
+        </h1>
+        <p className="text-red-400 text-xl sm:text-2xl md:text-3xl">
+          is under construction
+        </p>
+      </main>
+
+      <Footer />
     </div>
   );
 }
