@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
-
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import Image from 'next/image';
 import './Navbar.css';
@@ -12,15 +11,30 @@ import ThemeToggleButton from "../ui/theme-toggle-button"
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, resolvedTheme } = useTheme();
+
+  // Prevent hydration mismatch
+useEffect(()=>{
+  setMounted(true);
+},[]);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Don't render until mounted to prevent hydration issues
+  if (!mounted) {
+    return null;
+  }
+
+  // Determining which logo to use based on theme
+  const logoSrc = resolvedTheme === 'dark' ? '/logo-dark.png' : '/logo-white.png';
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -28,7 +42,14 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link href="/" className="navbar-logo">
           <div className="logo-icon">
-           <Image src="/logo.png" alt="logo" height={60} width={60}/>
+           <Image 
+             src={logoSrc} 
+             alt="SangLok Logo" 
+             height={60} 
+             width={60}
+             className="logo-image"
+             priority
+           />
           </div>
           <span className="logo-text">SangLok</span>
         </Link>
