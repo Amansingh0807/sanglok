@@ -40,7 +40,7 @@ export default function Home() {
           <section className="p-8 rounded-lg bg-gray-100 dark:bg-gray-800">
             <h2 className="text-2xl font-bold mb-4">Coming Soon</h2>
             <p className="text-gray-700 dark:text-gray-300">
-              We're working hard to bring you the best project management experience. 
+              We&apos;re working hard to bring you the best project management experience. 
               Stay tuned for updates and early access opportunities.
             </p>
           </section>
