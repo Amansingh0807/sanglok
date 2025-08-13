@@ -3,8 +3,8 @@ import React from 'react';
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "CTO at TechFlow",
+      name: "Sarah",
+      role: "CTO at Techub",
       company: "TechFlow",
       avatar: "👩‍💻",
       rating: 5,
@@ -13,8 +13,8 @@ const TestimonialsSection: React.FC = () => {
     },
     {
       name: "Marcus Rodriguez", 
-      role: "Lead Developer at StartupX",
-      company: "StartupX",
+      role: "Lead Developer at StartupXYZ",
+      company: "StartupXYZ",
       avatar: "👨‍💻",
       rating: 5,
       text: "The Git integration is seamless. Our code reviews are faster, and project tracking is effortless. Best project management tool I've used!",
@@ -22,17 +22,17 @@ const TestimonialsSection: React.FC = () => {
     },
     {
       name: "Emily Johnson",
-      role: "Product Manager at InnovateCorp",
-      company: "InnovateCorp", 
+      role: "Product Manager at InnovateX",
+      company: "InnovateX",
       avatar: "👩‍💼",
       rating: 5,
       text: "SangLok's analytics helped us identify bottlenecks we didn't know existed. Our productivity increased by 60% in just 3 months.",
       gradient: "from-green-500 to-teal-600"
     },
     {
-      name: "David Kim",
-      role: "Engineering Manager at CloudTech",
-      company: "CloudTech",
+      name: "David Kimim",
+      role: "Engineering Manager at CloudTechnology",
+      company: "CloudTechnology",
       avatar: "👨‍💼", 
       rating: 5,
       text: "Managing a remote team of 25 developers was challenging until we found SangLok. Now everyone stays in sync effortlessly.",
