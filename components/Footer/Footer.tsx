@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center mb-6">
               <div className="rounded-lg p-2 mr-3">
                 <Image
-                  src="/logo-white.png"
+                  src="/logo-dark.png"
                   alt="SangLok Logo"
                   width={40}
                   height={40}
@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
             <p className="text-gray-400 text-sm">
-              © 2024 SangLok. All rights reserved.
+              © {new Date().getFullYear()} SangLok. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
