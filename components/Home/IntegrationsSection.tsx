@@ -4,7 +4,7 @@ const IntegrationsSection: React.FC = () => {
   const integrations = [
     { name: "GitHub", logo: "🐙", color: "hover:bg-gray-800" },
     { name: "GitLab", logo: "🦊", color: "hover:bg-orange-500" },
-    { name: "Bitbucket", logo: "📘", color: "hover:bg-blue-600" },
+    { name: "Big Bucket", logo: "📘", color: "hover:bg-blue-600" },
     { name: "Jira", logo: "🔷", color: "hover:bg-blue-700" },
     { name: "Slack", logo: "📱", color: "hover:bg-purple-600" },
     { name: "Discord", logo: "🎮", color: "hover:bg-indigo-600" },
@@ -14,10 +14,10 @@ const IntegrationsSection: React.FC = () => {
     { name: "Azure", logo: "☁️", color: "hover:bg-blue-600" },
     { name: "AWS", logo: "🔶", color: "hover:bg-orange-600" },
     { name: "Docker", logo: "🐳", color: "hover:bg-blue-500" },
-    { name: "Kubernetes", logo: "⚙️", color: "hover:bg-blue-700" },
+    { name: "Kuber netes", logo: "⚙️", color: "hover:bg-blue-700" },
     { name: "Jenkins", logo: "🔧", color: "hover:bg-gray-600" },
     { name: "VS Code", logo: "💻", color: "hover:bg-blue-600" },
-    { name: "Postman", logo: "📮", color: "hover:bg-orange-500" }
+    { name: "Post Man", logo: "📮", color: "hover:bg-orange-500" }
   ];
 
   const categories = [

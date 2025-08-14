@@ -34,7 +34,7 @@ export const wrap = (min: number, max: number, v: number) => {
 
 export const TextScroll: React.FC<TextScrollProps> = ({
   text,
-  default_velocity = 5,
+  default_velocity = 4,
   className,
   fontWeight = "bold",
   fontSize = "5xl",
