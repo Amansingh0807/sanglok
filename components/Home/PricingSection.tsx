@@ -1,10 +1,14 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 
 const PricingSection: React.FC = () => {
+  const [isAnnual, setIsAnnual] = useState(false);
+
   const plans = [
     {
       name: "Starter",
-      price: "Free",
+      monthlyPrice: "Free",
+      annualPrice: "Free",
       description: "Perfect for small teams getting started",
       features: [
         "Up to 5 team members",
@@ -20,8 +24,10 @@ const PricingSection: React.FC = () => {
     },
     {
       name: "Professional", 
-      price: "$12",
-      period: "/user/month",
+      monthlyPrice: "$12",
+      annualPrice: "$96",
+      originalAnnualPrice: "$144",
+      period: isAnnual ? "/user/year" : "/user/month",
       description: "Best for growing development teams",
       features: [
         "Unlimited team members",
@@ -39,8 +45,10 @@ const PricingSection: React.FC = () => {
     },
     {
       name: "Enterprise",
-      price: "$24",
-      period: "/user/month", 
+      monthlyPrice: "$24",
+      annualPrice: "$192",
+      originalAnnualPrice: "$288",
+      period: isAnnual ? "/user/year" : "/user/month",
       description: "For large organizations with advanced needs",
       features: [
         "Everything in Professional",
@@ -71,11 +79,28 @@ const PricingSection: React.FC = () => {
           
           {/* Billing Toggle */}
           <div className="inline-flex items-center bg-white dark:bg-gray-800 rounded-xl p-1 border border-gray-200 dark:border-gray-600">
-            <button className="px-6 py-2 rounded-lg bg-blue-600 text-white font-medium cursor-pointer transition-all duration-300">
+            <button 
+              onClick={() => setIsAnnual(false)}
+              className={`px-6 py-2 rounded-lg font-medium cursor-pointer transition-all duration-300 ${
+                !isAnnual 
+                  ? 'bg-blue-600 text-white' 
+                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+              }`}
+            >
               Monthly
             </button>
-            <button className="px-6 py-2 rounded-lg text-gray-600 dark:text-gray-300 font-medium cursor-pointer hover:text-gray-900 dark:hover:text-white transition-all duration-300">
-              Annual (Save 20%)
+            <button 
+              onClick={() => setIsAnnual(true)}
+              className={`px-6 py-2 rounded-lg font-medium cursor-pointer transition-all duration-300 relative ${
+                isAnnual 
+                  ? 'bg-blue-600 text-white' 
+                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+              }`}
+            >
+              Annual 
+              <span className="ml-1 text-xs bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 px-2 py-1 rounded-full">
+                Save 20%
+              </span>
             </button>
           </div>
         </div>
@@ -106,11 +131,34 @@ const PricingSection: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 mb-4">{plan.description}</p>
                   
                   <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
+                    <span className="text-5xl font-bold text-gray-900 dark:text-white">
+                      {isAnnual ? plan.annualPrice : plan.monthlyPrice}
+                    </span>
                     {plan.period && (
                       <span className="text-gray-600 dark:text-gray-400 ml-1">{plan.period}</span>
                     )}
                   </div>
+                  
+                  {/* Show savings for annual plans */}
+                  {isAnnual && plan.originalAnnualPrice && plan.annualPrice !== "Free" && (
+                    <div className="mt-3">
+                      <span className="text-sm text-gray-500 dark:text-gray-400 line-through mr-2">
+                        {plan.originalAnnualPrice}/user/year
+                      </span>
+                      <span className="text-sm bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 px-3 py-1 rounded-full font-semibold">
+                        Save 33%
+                      </span>
+                    </div>
+                  )}
+                  
+                  {/* Show monthly equivalent for annual plans */}
+                  {isAnnual && plan.annualPrice !== "Free" && (
+                    <div className="mt-2">
+                      <span className="text-sm text-gray-500 dark:text-gray-400">
+                        ${Math.round(parseInt(plan.annualPrice.replace('$', '')) / 12)}/user/month billed annually
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Features List */}
