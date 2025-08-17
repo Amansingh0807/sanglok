@@ -7,7 +7,6 @@ import Image from 'next/image';
 import './Navbar.css';
 import ThemeToggleButton from "../ui/theme-toggle-button"
 
-
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,9 +14,9 @@ const Navbar: React.FC = () => {
   const { resolvedTheme } = useTheme();
 
   // Prevent hydration mismatch
-useEffect(()=>{
-  setMounted(true);
-},[]);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +26,32 @@ useEffect(()=>{
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (isMobileMenuOpen && !target.closest('.navbar')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMobileMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   // Don't render until mounted to prevent hydration issues
   if (!mounted) {
@@ -42,41 +67,38 @@ useEffect(()=>{
         {/* Logo */}
         <Link href="/" className="navbar-logo">
           <div className="logo-icon">
-           <Image 
-             src={logoSrc} 
-             alt="SangLok Logo" 
-             height={60} 
-             width={60}
-             className="logo-image"
-             priority
-           />
+            <Image 
+              src={logoSrc} 
+              alt="SangLok Logo" 
+              height={40} 
+              width={40}
+              className="logo-image"
+              priority
+            />
           </div>
           <span className="logo-text">SangLok</span>
         </Link>
         
-
         {/* Desktop Navigation */}
         <div className="navbar-links">
           <Link href="/" className="nav-link">
             Home
           </Link>
-          <Link href="#" className="nav-link">
+          <Link href="#features" className="nav-link">
             Features
           </Link>
-          <Link href="#" className="nav-link">
+          <Link href="#about" className="nav-link">
             About Us
+          </Link>
+          <Link href="#pricing" className="nav-link">
+            Pricing
           </Link>
         </div>
 
         {/* Right Side Actions */}
         <div className="navbar-actions">
           {/* Theme Toggle */}
-          {/* <button className="theme-toggle" aria-label="Toggle theme">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2"/>
-              <path d="m12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="2"/>
-            </svg>
-          </button> */}<ThemeToggleButton />
+          <ThemeToggleButton />
 
           {/* Get Started Button */}
           <Link href="/sign-in" className="get-started-btn">
@@ -88,6 +110,7 @@ useEffect(()=>{
             className="mobile-menu-btn"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
             <span className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
@@ -102,13 +125,16 @@ useEffect(()=>{
           <Link href="/" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
             Home
           </Link>
-          <Link href="/features" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#features" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
             Features
           </Link>
-          <Link href="/pricing" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#about" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+            About Us
+          </Link>
+          <Link href="#pricing" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
             Pricing
           </Link>
-          <Link href="/get-started" className="mobile-get-started-btn" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/sign-in" className="mobile-get-started-btn" onClick={() => setIsMobileMenuOpen(false)}>
             Get Started
           </Link>
         </div>
