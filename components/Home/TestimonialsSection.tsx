@@ -145,7 +145,7 @@ const TestimonialsSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Security & Compliance Badges */}
+          {/* Security & Compliance Badges
           <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Trusted & Secure</h3>
@@ -154,7 +154,7 @@ const TestimonialsSection: React.FC = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {/* SOC 2 */}
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 dark:border-gray-700">
+              {/* <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 dark:border-gray-700">
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -164,7 +164,7 @@ const TestimonialsSection: React.FC = () => {
                 <div className="text-xs text-gray-600 dark:text-gray-400">Type II</div>
               </div>
 
-              {/* GDPR */}
+              GDPR
               <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 dark:border-gray-700">
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,7 +175,7 @@ const TestimonialsSection: React.FC = () => {
                 <div className="text-xs text-gray-600 dark:text-gray-400">Compliant</div>
               </div>
 
-              {/* ISO 27001 */}
+              ISO 27001
               <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 dark:border-gray-700">
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,7 +186,7 @@ const TestimonialsSection: React.FC = () => {
                 <div className="text-xs text-gray-600 dark:text-gray-400">Certified</div>
               </div>
 
-              {/* SSO */}
+              SSO
               <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 dark:border-gray-700">
                 <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,7 +197,7 @@ const TestimonialsSection: React.FC = () => {
                 <div className="text-xs text-gray-600 dark:text-gray-400">Support</div>
               </div>
 
-              {/* 256-bit Encryption */}
+              256-bit Encryption
               <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 dark:border-gray-700">
                 <div className="w-12 h-12 bg-red-100 dark:bg-red-900/50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -208,7 +208,7 @@ const TestimonialsSection: React.FC = () => {
                 <div className="text-xs text-gray-600 dark:text-gray-400">Encryption</div>
               </div>
 
-              {/* 99.9% Uptime */}
+              99.9% Uptime
               <div className="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer group border border-gray-100 dark:border-gray-700">
                 <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/50 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -219,7 +219,7 @@ const TestimonialsSection: React.FC = () => {
                 <div className="text-xs text-gray-600 dark:text-gray-400">Uptime SLA</div>
               </div>
             </div>
-          </div>
+          </div>  */}
 
           {/* Customer Logos */}
           {/* <div className="mt-12 text-center">
