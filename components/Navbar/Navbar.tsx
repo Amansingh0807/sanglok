@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import LoadingLink from '@/components/ui/loading-link';
 import Image from 'next/image';
 import './Navbar.css';
 import ThemeToggleButton from "../ui/theme-toggle-button"
@@ -81,18 +82,18 @@ const Navbar: React.FC = () => {
         
         {/* Desktop Navigation */}
         <div className="navbar-links">
-          <Link href="/" className="nav-link">
+          <LoadingLink href="/" className="nav-link">
             Home
-          </Link>
-          <Link href="#features" className="nav-link">
+          </LoadingLink>
+          <LoadingLink href="#features" className="nav-link">
             Features
-          </Link>
-          <Link href="#about" className="nav-link">
+          </LoadingLink>
+          <LoadingLink href="#about" className="nav-link">
             About Us
-          </Link>
-          <Link href="#pricing" className="nav-link">
+          </LoadingLink>
+          <LoadingLink href="#pricing" className="nav-link">
             Pricing
-          </Link>
+          </LoadingLink>
         </div>
 
         {/* Right Side Actions */}
@@ -101,9 +102,9 @@ const Navbar: React.FC = () => {
           <ThemeToggleButton />
 
           {/* Get Started Button */}
-          <Link href="/sign-in" className="get-started-btn">
+          <LoadingLink href="/sign-in" className="get-started-btn">
             Get Started
-          </Link>
+          </LoadingLink>
 
           {/* Mobile Menu Button */}
           <button 
@@ -122,21 +123,21 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <Link href="/" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+          <LoadingLink href="/" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
             Home
-          </Link>
-          <Link href="#features" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+          </LoadingLink>
+          <LoadingLink href="#features" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
             Features
-          </Link>
-          <Link href="#about" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+          </LoadingLink>
+          <LoadingLink href="#about" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
             About Us
-          </Link>
-          <Link href="#pricing" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+          </LoadingLink>
+          <LoadingLink href="#pricing" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
             Pricing
-          </Link>
-          <Link href="/sign-in" className="mobile-get-started-btn" onClick={() => setIsMobileMenuOpen(false)}>
+          </LoadingLink>
+          <LoadingLink href="/sign-in" className="mobile-get-started-btn" onClick={() => setIsMobileMenuOpen(false)}>
             Get Started
-          </Link>
+          </LoadingLink>
         </div>
       </div>
     </nav>

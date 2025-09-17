@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import LoadingLink from '@/components/ui/loading-link';
 import { 
   Mail, 
   Lock, 
@@ -514,9 +514,9 @@ const SignUp: React.FC = () => {
         <div className="text-center mt-6">
           <p className="text-gray-600 dark:text-gray-400">
             Already have an account?{' '}
-            <Link href="/sign-in" className="text-blue-600 hover:text-blue-500 font-semibold">
+            <LoadingLink href="/sign-in" className="text-blue-600 hover:text-blue-500 font-semibold">
               Sign in
-            </Link>
+            </LoadingLink>
           </p>
         </div>
       </div>
