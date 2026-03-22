@@ -14,10 +14,13 @@ import { TextScroll } from '@/components/ui/text-scroll';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
+    <div className="flex flex-col min-h-screen bg-zinc-50 dark:bg-black">
       <Navbar />
       <HeroSection />
-      <TextScroll text="- Welcome to SangLok" />
+      <TextScroll
+        text="- Welcome to SangLok"
+        className="text-zinc-900 dark:text-zinc-100 bg-gradient-to-r from-zinc-950 via-orange-500 to-zinc-900 bg-clip-text text-transparent"
+      />
       <FeaturesSection />
       <HowItWorksSection />
       <TestimonialsSection />
