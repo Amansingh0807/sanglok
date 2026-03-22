@@ -66,7 +66,7 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #111111 0%, #ff8a00 100%);
   padding: 8px;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .logo-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #111111 0%, #ff8a00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -128,7 +128,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #111111 0%, #ff8a00 100%);
   border-radius: 12px;
   opacity: 0;
   transform: scale(0.8);
@@ -199,7 +199,7 @@
 .get-started-btn {
   position: relative;
   padding: 0.625rem 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #111111 0%, #ff8a00 100%);
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -207,7 +207,7 @@
   border-radius: 12px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+  box-shadow: 0 4px 15px rgba(255, 138, 0, 0.28);
   border: none;
   white-space: nowrap;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -230,8 +230,8 @@
 
 .get-started-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.35);
-  background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
+  box-shadow: 0 8px 25px rgba(255, 138, 0, 0.4);
+  background: linear-gradient(135deg, #090909 0%, #ff7a00 100%);
 }
 
 /* Mobile Menu Button */
@@ -365,7 +365,7 @@
 
 .mobile-get-started-btn {
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #111111 0%, #ff8a00 100%);
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -374,14 +374,14 @@
   text-align: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 1rem;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+  box-shadow: 0 4px 15px rgba(255, 138, 0, 0.28);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .mobile-get-started-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.35);
-  background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
+  box-shadow: 0 8px 25px rgba(255, 138, 0, 0.4);
+  background: linear-gradient(135deg, #090909 0%, #ff7a00 100%);
 }
 
 /* Responsive Design */
@@ -504,7 +504,7 @@
 .get-started-btn:focus,
 .theme-toggle:focus,
 .mobile-menu-btn:focus {
-  outline: 2px solid #667eea;
+  outline: 2px solid #ff8a00;
   outline-offset: 2px;
 }
 
