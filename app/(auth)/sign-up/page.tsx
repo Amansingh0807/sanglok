@@ -33,16 +33,16 @@ const ProgressBar: React.FC<StepProps> = ({ step, totalSteps, currentStep }) => 
     <div className="flex items-center">
       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${
         isCompleted 
-          ? 'bg-blue-600 text-white' 
+          ? 'bg-orange-600 text-white' 
           : isCurrent 
-            ? 'bg-blue-100 text-blue-600 border-2 border-blue-600' 
+            ? 'bg-orange-100 text-orange-600 border-2 border-orange-600' 
             : 'bg-gray-200 text-gray-500'
       }`}>
         {isCompleted ? <CheckCircle className="w-4 h-4" /> : step}
       </div>
       {step < totalSteps && (
         <div className={`w-12 h-1 mx-2 transition-all duration-300 ${
-          isCompleted ? 'bg-blue-600' : 'bg-gray-200'
+          isCompleted ? 'bg-orange-600' : 'bg-gray-200'
         }`} />
       )}
     </div>
@@ -151,7 +151,7 @@ const SignUp: React.FC = () => {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     placeholder="John"
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     required
                   />
                 </div>
@@ -171,7 +171,7 @@ const SignUp: React.FC = () => {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     placeholder="Doe"
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     required
                   />
                 </div>
@@ -192,7 +192,7 @@ const SignUp: React.FC = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="john@example.com"
-                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   required
                 />
               </div>
@@ -212,7 +212,7 @@ const SignUp: React.FC = () => {
                   value={formData.password}
                   onChange={handleInputChange}
                   placeholder="Create a strong password"
-                  className="w-full pl-10 pr-12 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                  className="w-full pl-10 pr-12 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   required
                 />
                 <button
@@ -253,7 +253,7 @@ const SignUp: React.FC = () => {
                   value={formData.company}
                   onChange={handleInputChange}
                   placeholder="Your company name"
-                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                 />
               </div>
             </div>
@@ -270,7 +270,7 @@ const SignUp: React.FC = () => {
                   name="role"
                   value={formData.role}
                   onChange={handleInputChange}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white"
                 >
                   <option value="">Select your role</option>
                   <option value="developer">Developer</option>
@@ -295,7 +295,7 @@ const SignUp: React.FC = () => {
                   name="teamSize"
                   value={formData.teamSize}
                   onChange={handleInputChange}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all duration-200 text-gray-900 dark:text-white"
                 >
                   <option value="">Select team size</option>
                   <option value="1">Just me</option>
@@ -339,7 +339,7 @@ const SignUp: React.FC = () => {
                       key={goal.value}
                       className={`flex items-center p-4 border rounded-xl cursor-pointer transition-all duration-200 ${
                         formData.primaryGoal === goal.value
-                          ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
+                          ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
                           : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
                       }`}
                     >
@@ -351,7 +351,7 @@ const SignUp: React.FC = () => {
                         onChange={handleInputChange}
                         className="sr-only"
                       />
-                      <Icon className="h-5 w-5 text-blue-600 mr-3" />
+                      <Icon className="h-5 w-5 text-orange-600 mr-3" />
                       <span className="text-sm font-medium text-gray-900 dark:text-white">
                         {goal.label}
                       </span>
@@ -374,7 +374,7 @@ const SignUp: React.FC = () => {
                     onClick={() => handleInterestToggle(interest)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                       formData.interests.includes(interest)
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-orange-600 text-white'
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                   >
@@ -399,7 +399,7 @@ const SignUp: React.FC = () => {
                 name="notifications"
                 checked={formData.notifications}
                 onChange={handleInputChange}
-                className="w-4 h-4 text-blue-600 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
+                className="w-4 h-4 text-orange-600 bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded focus:ring-orange-500 focus:ring-2"
               />
             </div>
           </div>
@@ -411,17 +411,17 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-100 via-white to-orange-100 dark:from-black dark:via-zinc-950 dark:to-orange-950/40 flex items-center justify-center p-4">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
-        <div className="w-full h-full bg-gradient-to-br from-blue-100/20 to-indigo-100/20"></div>
+        <div className="w-full h-full bg-gradient-to-br from-orange-100/20 to-zinc-200/20"></div>
       </div>
       
       {/* Main Container */}
       <div className="relative w-full max-w-lg">
         {/* Logo and Brand */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-4 shadow-lg">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zinc-900 to-orange-600 rounded-2xl mb-4 shadow-lg">
             <span className="text-2xl font-bold text-white">S</span>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -459,7 +459,7 @@ const SignUp: React.FC = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="bg-gradient-to-r from-zinc-900 to-orange-600 hover:from-zinc-950 hover:to-orange-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 {isLoading ? (
                   <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
@@ -514,7 +514,7 @@ const SignUp: React.FC = () => {
         <div className="text-center mt-6">
           <p className="text-gray-600 dark:text-gray-400">
             Already have an account?{' '}
-            <LoadingLink href="/sign-in" className="text-blue-600 hover:text-blue-500 font-semibold">
+            <LoadingLink href="/sign-in" className="text-orange-600 hover:text-orange-500 font-semibold">
               Sign in
             </LoadingLink>
           </p>

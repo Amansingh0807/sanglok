@@ -16,10 +16,10 @@ const WelcomePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-100 via-white to-orange-100 dark:from-black dark:via-zinc-950 dark:to-orange-950/40 flex items-center justify-center p-4">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
-        <div className="w-full h-full bg-gradient-to-br from-blue-100/20 to-indigo-100/20"></div>
+        <div className="w-full h-full bg-gradient-to-br from-orange-100/20 to-zinc-200/20"></div>
       </div>
       
       {/* Main Container */}
@@ -50,8 +50,8 @@ const WelcomePage: React.FC = () => {
 
           {/* Quick Actions Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="flex items-start space-x-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="flex items-start space-x-4 p-4 bg-zinc-100 dark:bg-zinc-800 rounded-xl">
+              <div className="flex-shrink-0 w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center">
                 <Target className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -64,8 +64,8 @@ const WelcomePage: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4 p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
+            <div className="flex items-start space-x-4 p-4 bg-orange-50 dark:bg-orange-900/20 rounded-xl">
+              <div className="flex-shrink-0 w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
                 <Users className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -78,8 +78,8 @@ const WelcomePage: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+            <div className="flex items-start space-x-4 p-4 bg-zinc-100 dark:bg-zinc-800 rounded-xl">
+              <div className="flex-shrink-0 w-10 h-10 bg-zinc-700 rounded-lg flex items-center justify-center">
                 <Star className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -112,7 +112,7 @@ const WelcomePage: React.FC = () => {
             <button
               onClick={handleGetStarted}
               disabled={isLoading}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="bg-gradient-to-r from-zinc-900 to-orange-600 hover:from-zinc-950 hover:to-orange-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               {isLoading ? (
                 <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
@@ -135,7 +135,7 @@ const WelcomePage: React.FC = () => {
 
         {/* Pro Tip */}
         <div className="text-center">
-          <div className="inline-flex items-center space-x-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center space-x-2 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 px-4 py-2 rounded-full text-sm font-medium">
             <Star className="w-4 h-4" />
             <span>Pro tip: Start with a template to save time!</span>
           </div>
