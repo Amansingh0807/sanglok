@@ -9,7 +9,7 @@ const TestimonialsSection: React.FC = () => {
       avatar: "👩‍💻",
       rating: 5,
       text: "SangLok transformed our development workflow. We've reduced project delivery time by 40% and our team collaboration has never been better.",
-      gradient: "from-blue-500 to-indigo-600"
+      gradient: "from-zinc-900 to-orange-600"
     },
     {
       name: "Marcus Rodriguez", 
@@ -18,7 +18,7 @@ const TestimonialsSection: React.FC = () => {
       avatar: "👨‍💻",
       rating: 5,
       text: "The Git integration is seamless. Our code reviews are faster, and project tracking is effortless. Best project management tool I've used!",
-      gradient: "from-purple-500 to-pink-600"
+      gradient: "from-zinc-700 to-zinc-900"
     },
     {
       name: "Emily Johnson",
@@ -27,7 +27,7 @@ const TestimonialsSection: React.FC = () => {
       avatar: "👩‍💼",
       rating: 5,
       text: "SangLok's analytics helped us identify bottlenecks we didn't know existed. Our productivity increased by 60% in just 3 months.",
-      gradient: "from-green-500 to-teal-600"
+      gradient: "from-orange-500 to-orange-700"
     },
     {
       name: "David Kimim",
@@ -36,12 +36,12 @@ const TestimonialsSection: React.FC = () => {
       avatar: "👨‍💼", 
       rating: 5,
       text: "Managing a remote team of 25 developers was challenging until we found SangLok. Now everyone stays in sync effortlessly.",
-      gradient: "from-orange-500 to-red-600"
+      gradient: "from-zinc-600 to-orange-500"
     }
   ];
 
   return (
-    <section className="py-20 px-4 bg-white dark:bg-gray-900">
+    <section className="py-20 px-4 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -80,7 +80,7 @@ const TestimonialsSection: React.FC = () => {
                 <div>
                   <div className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</div>
                   <div className="text-gray-600 dark:text-gray-400 text-sm">{testimonial.role}</div>
-                  <div className="text-blue-600 dark:text-blue-400 text-sm font-medium">{testimonial.company}</div>
+                  <div className="text-orange-600 dark:text-orange-400 text-sm font-medium">{testimonial.company}</div>
                 </div>
               </div>
 
@@ -94,13 +94,13 @@ const TestimonialsSection: React.FC = () => {
         <div className="mt-16">
           {/* Main Trust Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 text-center border border-blue-100 dark:border-blue-800 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800 rounded-2xl p-6 text-center border border-zinc-200 dark:border-zinc-700 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <div className="w-12 h-12 bg-gradient-to-r from-zinc-900 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                 </svg>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">4.9/5</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">4.9/5</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Average Rating</div>
               <div className="flex justify-center mt-2">
                 {[...Array(5)].map((_, i) => (
@@ -111,30 +111,30 @@ const TestimonialsSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-6 text-center border border-green-100 dark:border-green-800 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-2xl p-6 text-center border border-orange-200 dark:border-orange-800/40 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">50K+</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">50K+</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Active Users</div>
-              <div className="text-xs text-green-600 dark:text-green-400 font-medium mt-1">Growing daily</div>
+              <div className="text-xs text-orange-600 dark:text-orange-400 font-medium mt-1">Growing daily</div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-6 text-center border border-purple-100 dark:border-purple-800 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800 rounded-2xl p-6 text-center border border-zinc-200 dark:border-zinc-700 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <div className="w-12 h-12 bg-gradient-to-r from-zinc-700 to-zinc-900 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">500+</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-zinc-800 dark:group-hover:text-zinc-100 transition-colors duration-300">500+</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Companies</div>
-              <div className="text-xs text-purple-600 dark:text-purple-400 font-medium mt-1">Fortune 500 included</div>
+              <div className="text-xs text-zinc-700 dark:text-zinc-300 font-medium mt-1">Fortune 500 included</div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-2xl p-6 text-center border border-orange-100 dark:border-orange-800 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div className="bg-gradient-to-br from-zinc-100 to-orange-100 dark:from-zinc-900 dark:to-orange-900/20 rounded-2xl p-6 text-center border border-zinc-200 dark:border-zinc-700 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+              <div className="w-12 h-12 bg-gradient-to-r from-zinc-800 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
