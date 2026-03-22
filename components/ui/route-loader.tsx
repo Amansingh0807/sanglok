@@ -82,15 +82,21 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(255, 255, 255, 0.85);
-          backdrop-filter: blur(12px);
+          background:
+            radial-gradient(circle at 20% 15%, rgba(255, 138, 0, 0.18), transparent 40%),
+            radial-gradient(circle at 82% 78%, rgba(255, 138, 0, 0.12), transparent 42%),
+            linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.86) 42%, rgba(233, 233, 233, 0.92) 100%);
+          backdrop-filter: blur(14px) saturate(115%);
           opacity: 0;
           transform: scale(0.95);
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         :global(.dark) .loader-overlay {
-          background: rgba(15, 23, 42, 0.85);
+          background:
+            radial-gradient(circle at 18% 16%, rgba(255, 138, 0, 0.2), transparent 45%),
+            radial-gradient(circle at 86% 80%, rgba(255, 138, 0, 0.14), transparent 44%),
+            linear-gradient(145deg, rgba(12, 12, 12, 0.94) 0%, rgba(22, 22, 22, 0.9) 45%, rgba(7, 7, 7, 0.95) 100%);
         }
 
         .loader-overlay.animate-in {
@@ -108,6 +114,21 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           display: flex;
           flex-direction: column;
           align-items: center;
+          padding: 2rem 2.2rem;
+          border-radius: 1.5rem;
+          border: 1px solid rgba(255, 255, 255, 0.55);
+          background: linear-gradient(160deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.38));
+          box-shadow:
+            0 26px 70px rgba(0, 0, 0, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        :global(.dark) .loader-content {
+          border-color: rgba(255, 255, 255, 0.1);
+          background: linear-gradient(160deg, rgba(18, 18, 18, 0.78), rgba(8, 8, 8, 0.65));
+          box-shadow:
+            0 30px 72px rgba(0, 0, 0, 0.64),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
         }
 
         .loader-logo {
@@ -120,9 +141,11 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           justify-content: center;
           width: 4rem;
           height: 4rem;
-          background: linear-gradient(135deg, #3b82f6 0%, #ec4899 50%, #1f2937 100%);
-          border-radius: 1rem;
-          box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+          background: linear-gradient(145deg, #0a0a0a 0%, #1f1f1f 48%, #ff8a00 100%);
+          border-radius: 1.1rem;
+          box-shadow:
+            0 12px 28px rgba(255, 138, 0, 0.35),
+            0 8px 18px rgba(0, 0, 0, 0.35);
           animation: logo-pulse 2s ease-in-out infinite;
         }
 
@@ -146,35 +169,39 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
         }
 
         .dot-1 {
-          background: #3b82f6;
+          background: #111111;
           animation-delay: -0.32s;
         }
 
         .dot-2 {
-          background: #ec4899;
+          background: #ff8a00;
           animation-delay: -0.16s;
         }
 
         .dot-3 {
-          background: #1f2937;
+          background: #ffffff;
         }
 
         :global(.dark) .dot-3 {
-          background: #f1f5f9;
+          background: #ffd6a3;
         }
 
         .loader-progress {
           width: 12rem;
           height: 0.25rem;
-          background: rgba(148, 163, 184, 0.2);
+          background: rgba(0, 0, 0, 0.16);
           border-radius: 9999px;
           overflow: hidden;
           margin-bottom: 1rem;
         }
 
+        :global(.dark) .loader-progress {
+          background: rgba(255, 255, 255, 0.18);
+        }
+
         .progress-bar {
           height: 100%;
-          background: linear-gradient(90deg, #3b82f6 0%, #ec4899 50%, #1f2937 100%);
+          background: linear-gradient(90deg, #ffffff 0%, #ff8a00 45%, #111111 100%);
           border-radius: 9999px;
           animation: progress 2s ease-in-out infinite;
         }
@@ -182,13 +209,15 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
         .loader-text {
           margin-top: 1rem;
           font-size: 0.875rem;
-          font-weight: 500;
-          color: #64748b;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #2f2f2f;
           animation: text-pulse 2s ease-in-out infinite;
         }
 
         :global(.dark) .loader-text {
-          color: #94a3b8;
+          color: #f3f3f3;
         }
 
         .floating-circles {
@@ -208,7 +237,7 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           left: -2.5rem;
           width: 1rem;
           height: 1rem;
-          background: rgba(59, 130, 246, 0.2);
+          background: rgba(255, 138, 0, 0.28);
           animation-delay: 0s;
         }
 
@@ -217,7 +246,7 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           right: -2rem;
           width: 0.75rem;
           height: 0.75rem;
-          background: rgba(236, 72, 153, 0.2);
+          background: rgba(0, 0, 0, 0.2);
           animation-delay: 1s;
         }
 
@@ -226,7 +255,7 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           left: -1.5rem;
           width: 0.5rem;
           height: 0.5rem;
-          background: rgba(31, 41, 55, 0.2);
+          background: rgba(255, 255, 255, 0.7);
           animation-delay: 2s;
         }
 
@@ -235,14 +264,14 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           right: -2.5rem;
           width: 1.25rem;
           height: 1.25rem;
-          background: rgba(59, 130, 246, 0.15);
+          background: rgba(255, 138, 0, 0.16);
           animation-delay: 0.5s;
         }
 
         .loader-background {
           position: absolute;
           inset: 0;
-          opacity: 0.05;
+          opacity: 0.12;
           pointer-events: none;
         }
 
@@ -258,7 +287,7 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           left: 25%;
           width: 8rem;
           height: 8rem;
-          background: #3b82f6;
+          background: #ff8a00;
           animation-delay: 0s;
         }
 
@@ -267,7 +296,7 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           right: 25%;
           width: 6rem;
           height: 6rem;
-          background: #ec4899;
+          background: #ffffff;
           animation-delay: 2s;
         }
 
@@ -276,18 +305,22 @@ const RouteLoader: React.FC<RouteLoaderProps> = ({ isLoading }) => {
           left: 33%;
           width: 7rem;
           height: 7rem;
-          background: #1f2937;
+          background: #0a0a0a;
           animation-delay: 4s;
         }
 
         @keyframes logo-pulse {
           0%, 100% {
             transform: scale(1) rotate(0deg);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+            box-shadow:
+              0 12px 28px rgba(255, 138, 0, 0.35),
+              0 8px 18px rgba(0, 0, 0, 0.35);
           }
           50% {
             transform: scale(1.05) rotate(1deg);
-            box-shadow: 0 15px 35px rgba(236, 72, 153, 0.4);
+            box-shadow:
+              0 16px 40px rgba(255, 138, 0, 0.45),
+              0 10px 24px rgba(0, 0, 0, 0.45);
           }
         }
 
