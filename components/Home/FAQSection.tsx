@@ -53,7 +53,7 @@ const FAQSection: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
             Everything you need to know about SangLok. Can&apos;t find what you&apos;re looking for? 
-            <button className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer ml-1">
+            <button className="text-orange-600 dark:text-orange-400 hover:underline cursor-pointer ml-1">
               Contact our support team
             </button>.
           </p>
@@ -67,14 +67,14 @@ const FAQSection: React.FC = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 cursor-pointer group"
+                className="w-full px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 cursor-pointer group"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                     {faq.question}
                   </h3>
                   <div className={`ml-4 flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
-                    <svg className="w-6 h-6 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-gray-400 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
@@ -93,7 +93,7 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8">
+        <div className="mt-16 text-center bg-gradient-to-r from-zinc-100 to-orange-100 dark:from-zinc-900 dark:to-orange-900/20 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-800">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Still have questions?
           </h3>
@@ -101,10 +101,10 @@ const FAQSection: React.FC = () => {
             Our team is here to help you get the most out of SangLok.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 cursor-pointer">
+            <button className="px-8 py-3 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-xl transition-all duration-300 cursor-pointer">
               Contact Support
             </button>
-            <button className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold rounded-xl hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300 cursor-pointer">
+            <button className="px-8 py-3 border-2 border-orange-600 text-orange-600 dark:text-orange-400 dark:border-orange-400 font-semibold rounded-xl hover:bg-orange-600 hover:text-white dark:hover:bg-orange-400 dark:hover:text-zinc-900 transition-all duration-300 cursor-pointer">
               Schedule a Demo
             </button>
           </div>

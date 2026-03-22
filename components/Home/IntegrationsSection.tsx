@@ -2,21 +2,21 @@ import React from 'react';
 
 const IntegrationsSection: React.FC = () => {
   const integrations = [
-    { name: "GitHub", logo: "🐙", color: "hover:bg-gray-800" },
+    { name: "GitHub", logo: "🐙", color: "hover:bg-zinc-900" },
     { name: "GitLab", logo: "🦊", color: "hover:bg-orange-500" },
-    { name: "Big Bucket", logo: "📘", color: "hover:bg-blue-600" },
-    { name: "Jira", logo: "🔷", color: "hover:bg-blue-700" },
-    { name: "Slack", logo: "📱", color: "hover:bg-purple-600" },
-    { name: "Discord", logo: "🎮", color: "hover:bg-indigo-600" },
-    { name: "Figma", logo: "🎨", color: "hover:bg-purple-500" },
-    { name: "Notion", logo: "📝", color: "hover:bg-gray-700" },
-    { name: "Trello", logo: "📋", color: "hover:bg-blue-500" },
-    { name: "Azure", logo: "☁️", color: "hover:bg-blue-600" },
+    { name: "Big Bucket", logo: "📘", color: "hover:bg-zinc-800" },
+    { name: "Jira", logo: "🔷", color: "hover:bg-zinc-700" },
+    { name: "Slack", logo: "📱", color: "hover:bg-orange-600" },
+    { name: "Discord", logo: "🎮", color: "hover:bg-zinc-700" },
+    { name: "Figma", logo: "🎨", color: "hover:bg-orange-500" },
+    { name: "Notion", logo: "📝", color: "hover:bg-zinc-700" },
+    { name: "Trello", logo: "📋", color: "hover:bg-zinc-800" },
+    { name: "Azure", logo: "☁️", color: "hover:bg-zinc-700" },
     { name: "AWS", logo: "🔶", color: "hover:bg-orange-600" },
-    { name: "Docker", logo: "🐳", color: "hover:bg-blue-500" },
-    { name: "Kuber netes", logo: "⚙️", color: "hover:bg-blue-700" },
-    { name: "Jenkins", logo: "🔧", color: "hover:bg-gray-600" },
-    { name: "VS Code", logo: "💻", color: "hover:bg-blue-600" },
+    { name: "Docker", logo: "🐳", color: "hover:bg-zinc-800" },
+    { name: "Kuber netes", logo: "⚙️", color: "hover:bg-zinc-900" },
+    { name: "Jenkins", logo: "🔧", color: "hover:bg-zinc-600" },
+    { name: "VS Code", logo: "💻", color: "hover:bg-zinc-800" },
     { name: "Post Man", logo: "📮", color: "hover:bg-orange-500" }
   ];
 
@@ -48,7 +48,7 @@ const IntegrationsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gray-50 dark:bg-gray-800/50">
+    <section className="py-20 px-4 bg-zinc-100/70 dark:bg-zinc-950">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -88,7 +88,7 @@ const IntegrationsSection: React.FC = () => {
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                 {category.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                 {category.title}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
@@ -98,7 +98,7 @@ const IntegrationsSection: React.FC = () => {
                 {category.tools.map((tool, toolIndex) => (
                   <span 
                     key={toolIndex}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-all duration-300"
+                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium group-hover:bg-orange-100 dark:group-hover:bg-orange-900/40 group-hover:text-orange-700 dark:group-hover:text-orange-300 transition-all duration-300"
                   >
                     {tool}
                   </span>
@@ -109,19 +109,19 @@ const IntegrationsSection: React.FC = () => {
         </div>
 
         {/* API Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
+        <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-orange-600 rounded-2xl p-8 text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-3xl font-bold mb-4">
               Don&apos;t see your tool? No problem!
             </h3>
-            <p className="text-xl text-blue-100 mb-6">
+            <p className="text-xl text-orange-100 mb-6">
               Use our powerful REST API and webhooks to integrate with any tool in your stack.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 cursor-pointer">
+              <button className="px-8 py-3 bg-white text-zinc-900 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 cursor-pointer">
                 View API Docs
               </button>
-              <button className="px-8 py-3 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 cursor-pointer">
+              <button className="px-8 py-3 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-orange-600 transition-all duration-300 cursor-pointer">
                 Request Integration
               </button>
             </div>
@@ -132,15 +132,15 @@ const IntegrationsSection: React.FC = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group cursor-pointer">
-              <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
+              <div className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
               <div className="text-gray-600 dark:text-gray-400">Native Integrations</div>
             </div>
             <div className="group cursor-pointer">
-              <div className="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-2 group-hover:scale-110 transition-transform duration-300">99.9%</div>
+              <div className="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2 group-hover:scale-110 transition-transform duration-300">99.9%</div>
               <div className="text-gray-600 dark:text-gray-400">API Uptime</div>
             </div>
             <div className="group cursor-pointer">
-              <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">&lt;100ms</div>
+              <div className="text-4xl font-bold text-zinc-700 dark:text-zinc-300 mb-2 group-hover:scale-110 transition-transform duration-300">&lt;100ms</div>
               <div className="text-gray-600 dark:text-gray-400">Response Time</div>
             </div>
           </div>

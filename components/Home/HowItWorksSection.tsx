@@ -7,53 +7,53 @@ const HowItWorksSection: React.FC = () => {
       title: "Sign Up & Set Up",
       description: "Create your account in seconds and invite your team members. Our onboarding wizard guides you through the initial setup.",
       icon: (
-        <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
         </svg>
       ),
-      gradient: "from-blue-500 to-indigo-600"
+      gradient: "from-zinc-900 to-orange-600"
     },
     {
       step: "02", 
       title: "Create Projects",
       description: "Set up your projects with custom workflows, assign team members, and define project goals and deadlines.",
       icon: (
-        <svg className="w-8 h-8 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-zinc-800 dark:text-zinc-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
         </svg>
       ),
-      gradient: "from-indigo-500 to-purple-600"
+      gradient: "from-zinc-700 to-zinc-900"
     },
     {
       step: "03",
       title: "Collaborate & Track", 
       description: "Work together in real-time, track progress with advanced analytics, and get insights into your team's productivity.",
       icon: (
-        <svg className="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-orange-500 dark:text-orange-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
-      gradient: "from-purple-500 to-pink-600"
+      gradient: "from-orange-500 to-orange-700"
     },
     {
       step: "04",
       title: "Deploy & Celebrate",
       description: "Ship your projects faster with streamlined workflows, automated reporting, and integrated deployment tools.",
       icon: (
-        <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-zinc-700 dark:text-zinc-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 0v1m-2 0V6a2 2 0 00-2 0v1m2 0V4a2 2 0 00-2 0v1m2 0V2a2 2 0 00-2 0v1" />
         </svg>
       ),
-      gradient: "from-green-500 to-teal-600"
+      gradient: "from-zinc-600 to-orange-500"
     }
   ];
 
   return (
-    <section className="py-20 px-4 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section className="py-20 px-4 bg-white dark:bg-black relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-blue-600 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-600 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-orange-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-zinc-700 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative">
@@ -70,7 +70,7 @@ const HowItWorksSection: React.FC = () => {
         <div className="hidden md:block">
           <div className="relative">
             {/* Connection Line */}
-            <div className="absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 via-indigo-600 via-purple-600 to-green-600 opacity-30"></div>
+            <div className="absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-zinc-900 via-orange-500 to-zinc-700 opacity-30"></div>
             
             <div className="grid md:grid-cols-4 gap-8">
               {steps.map((step, index) => (
@@ -86,7 +86,7 @@ const HowItWorksSection: React.FC = () => {
                   </div>
                   
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                     {step.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -115,7 +115,7 @@ const HowItWorksSection: React.FC = () => {
                   <div className="w-10 h-10 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center mr-3 group-hover:scale-105 transition-all duration-300">
                     {step.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
                     {step.title}
                   </h3>
                 </div>
@@ -129,14 +129,14 @@ const HowItWorksSection: React.FC = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-zinc-100 to-orange-100 dark:from-zinc-900 dark:to-orange-900/20 rounded-2xl p-8 border border-zinc-200 dark:border-zinc-800">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Ready to streamline your workflow?
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               Join thousands of teams already using SangLok to deliver better software faster.
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+            <button className="px-8 py-4 bg-gradient-to-r from-zinc-900 to-orange-600 hover:from-zinc-950 hover:to-orange-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
               Start Your Free Trial
             </button>
           </div>
