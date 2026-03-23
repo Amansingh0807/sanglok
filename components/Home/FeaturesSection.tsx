@@ -33,26 +33,6 @@ const FeaturesSection: React.FC = () => {
       bgColor: "bg-orange-100 dark:bg-orange-900/30"
     },
     {
-      title: "Git Integration",
-      description: "Deep integration with GitHub, GitLab, and Bitbucket for seamless code management.",
-      icon: (
-        <svg className="w-6 h-6 text-zinc-700 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      ),
-      bgColor: "bg-zinc-200 dark:bg-zinc-800"
-    },
-    {
-      title: "Mobile First",
-      description: "Native mobile apps for iOS and Android with offline capabilities and push notifications.",
-      icon: (
-        <svg className="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>
-      ),
-      bgColor: "bg-orange-100 dark:bg-orange-900/35"
-    },
-    {
       title: "Enterprise Security",
       description: "Bank-grade security with SSO, 2FA, and compliance with SOC 2, GDPR, and HIPAA.",
       icon: (
@@ -65,9 +45,10 @@ const FeaturesSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-zinc-100/70 dark:bg-zinc-950">
+    <section className="py-20 px-4 bg-zinc-100/70 dark:bg-zinc-950 relative overflow-hidden">
+      <div className="absolute -top-16 left-0 w-72 h-72 bg-orange-300/20 dark:bg-orange-700/20 rounded-full blur-3xl animate-drift"></div>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Powerful Features for Modern Teams
           </h2>
@@ -76,9 +57,13 @@ const FeaturesSection: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/90 dark:bg-zinc-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-200 dark:border-zinc-800 hover:border-orange-300 dark:hover:border-orange-700">
+            <div
+              key={index}
+              className="bg-white/90 dark:bg-zinc-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-200 dark:border-zinc-800 hover:border-orange-300 dark:hover:border-orange-700 hover:-translate-y-2 animate-fade-up"
+              style={{ animationDelay: `${140 * index}ms` }}
+            >
               <div className={`w-12 h-12 ${feature.bgColor} rounded-lg flex items-center justify-center mb-6`}>
                 {feature.icon}
               </div>

@@ -4,11 +4,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import HeroSection from '@/components/Home/HeroSection';
 import FeaturesSection from '@/components/Home/FeaturesSection';
-import HowItWorksSection from '@/components/Home/HowItWorksSection';
 import TestimonialsSection from '@/components/Home/TestimonialsSection';
-import IntegrationsSection from '@/components/Home/IntegrationsSection';
-import PricingSection from '@/components/Home/PricingSection';
-import FAQSection from '@/components/Home/FAQSection';
 import CTASection from '@/components/Home/CTASection';
 import { TextScroll } from '@/components/ui/text-scroll';
 
@@ -22,11 +18,7 @@ export default function Home() {
         className="text-zinc-900 dark:text-zinc-100 bg-gradient-to-r from-zinc-950 via-orange-500 to-zinc-900 bg-clip-text text-transparent"
       />
       <FeaturesSection />
-      <HowItWorksSection />
       <TestimonialsSection />
-      <IntegrationsSection />
-      <PricingSection />
-      <FAQSection />
       <CTASection />
       <Footer />
     </div>
